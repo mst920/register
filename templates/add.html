@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<script type="text/javascript" src="/static/js/script.js?q={{time_stamp}}"></script>
+
+<h3>プロフィールの追加</h3>
+<form action="/addprof" method="POST" name='input_form'>
+    名前:<input class='textbox' type="text" name="name"><br>
+    年齢:<input class='textbox' type="text" name="age"><br>
+    性別:<input class='textbox' type="text" name="sex">
+    <input type="submit" onClick="return Input_Check();"  name="" value="追加">
+</form>
+<p><button onclick="history.back()">戻る</button></p>
+{% endblock %}
